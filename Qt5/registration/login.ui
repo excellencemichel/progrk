@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>661</width>
-    <height>403</height>
+    <width>652</width>
+    <height>425</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
@@ -50,10 +56,10 @@ QPushButton{
   <widget class="QLabel" name="username_label">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>180</y>
-     <width>111</width>
-     <height>17</height>
+     <x>9</x>
+     <y>120</y>
+     <width>92</width>
+     <height>19</height>
     </rect>
    </property>
    <property name="font">
@@ -70,10 +76,10 @@ QPushButton{
   <widget class="QLabel" name="password_label">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>240</y>
-     <width>101</width>
-     <height>17</height>
+     <x>9</x>
+     <y>185</y>
+     <width>93</width>
+     <height>19</height>
     </rect>
    </property>
    <property name="font">
@@ -85,77 +91,20 @@ QPushButton{
     <string>PASSWORD :</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="username_lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>280</x>
-     <y>180</y>
-     <width>211</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="password_lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>280</x>
-     <y>240</y>
-     <width>211</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="login_btn">
-   <property name="geometry">
-    <rect>
-     <x>280</x>
-     <y>330</y>
-     <width>71</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color:rgb(255, 255, 255);
-
-/*
-border:none;
-C'est pas idéal d'enlever la bordure
-*/</string>
-   </property>
-   <property name="text">
-    <string>Login</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="signup_btn">
-   <property name="geometry">
-    <rect>
-     <x>378</x>
-     <y>330</y>
-     <width>81</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color:#fff;</string>
-   </property>
-   <property name="text">
-    <string>Sign Up</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="panel_label">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>69</y>
-     <width>261</width>
-     <height>41</height>
+     <x>9</x>
+     <y>43</y>
+     <width>166</width>
+     <height>37</height>
     </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
    </property>
    <property name="font">
     <font>
@@ -169,6 +118,81 @@ C'est pas idéal d'enlever la bordure
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="username_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>151</x>
+     <y>120</y>
+     <width>142</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="password_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>151</x>
+     <y>185</y>
+     <width>142</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="signup_btn">
+   <property name="geometry">
+    <rect>
+     <x>299</x>
+     <y>250</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:#fff;</string>
+   </property>
+   <property name="text">
+    <string>Sign Up</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="login_btn">
+   <property name="geometry">
+    <rect>
+     <x>151</x>
+     <y>250</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255, 255, 255);
+
+/*
+border:none;
+C'est pas idéal d'enlever la bordure
+*/</string>
+   </property>
+   <property name="text">
+    <string>Login</string>
    </property>
   </widget>
  </widget>
