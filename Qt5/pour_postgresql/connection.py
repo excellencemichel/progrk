@@ -83,7 +83,7 @@ class DatabaseConnexion:
 
 if __name__=="__main__":
     database_connection = DatabaseConnexion()
-    # database_connection.create_table() #Pour ne pas chaque fois relencer la fonction
+    database_connection.create_table() #Pour ne pas chaque fois relencer la fonction
     database_connection.inser_new_record() #Pour ne pas chaque fois relancer la foction
     # database_connection.updade_record()
     database_connection.query_all()

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Project SYSTEM "Project-5.1.dtd">
+<!-- eric project file for project BiblioApp -->
+<!-- Saved: 2018-11-22, 23:39:40 -->
+<!-- Copyright (C) 2018 Michel, bnvnmmnl@gmail.com -->
+<Project version="5.1">
+  <Language>en_US</Language>
+  <Hash>8a54fcaafd37758a9814db0f7f4903ba1dd7c24f</Hash>
+  <ProgLanguage mixed="0">Python3</ProgLanguage>
+  <ProjectType>PyQt5</ProjectType>
+  <Version>0.1</Version>
+  <Author>Michel</Author>
+  <Email>bnvnmmnl@gmail.com</Email>
+  <Eol index="0"/>
+  <Sources>
+    <Source>Ui_main_window_biblio.py</Source>
+    <Source>__init__.py</Source>
+    <Source>main_window_biblio.py</Source>
+    <Source>modele_biblio.py</Source>
+    <Source>start_app.py</Source>
+  </Sources>
+  <Forms>
+    <Form>main_window_biblio.ui</Form>
+  </Forms>
+  <Translations>
+    <Translation>biblioapp.en_US.qm</Translation>
+    <Translation>biblioapp.en_US.ts</Translation>
+    <Translation>biblioapp.fr_FR.qm</Translation>
+    <Translation>biblioapp.fr_FR.ts</Translation>
+  </Translations>
+  <Resources/>
+  <Interfaces/>
+  <Others/>
+  <MainScript>start_app.py</MainScript>
+  <Vcs>
+    <VcsType>None</VcsType>
+  </Vcs>
+  <FiletypeAssociations>
+    <FiletypeAssociation pattern="*.e4p" type="OTHERS"/>
+    <FiletypeAssociation pattern="*.idl" type="INTERFACES"/>
+    <FiletypeAssociation pattern="*.md" type="OTHERS"/>
+    <FiletypeAssociation pattern="*.py" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.py3" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw3" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.qm" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.qrc" type="RESOURCES"/>
+    <FiletypeAssociation pattern="*.rst" type="OTHERS"/>
+    <FiletypeAssociation pattern="*.ts" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.txt" type="OTHERS"/>
+    <FiletypeAssociation pattern="*.ui" type="FORMS"/>
+    <FiletypeAssociation pattern="README" type="OTHERS"/>
+    <FiletypeAssociation pattern="README.*" type="OTHERS"/>
+  </FiletypeAssociations>
+</Project>

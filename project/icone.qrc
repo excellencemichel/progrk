@@ -1,0 +1,19 @@
+<!DOCTYPE RCC><RCC version="1.00">
+
+<qresource>
+	<file>icons/png/001-windows-2.png</file>
+	<file>icons/png/002-chrome-2.png</file>
+	<file>icons/png/003-windows-1.png</file>
+	<file>icons/png/004-windows.png</file>
+	<file>icons/png/005-chrome-1.png</file>
+
+
+	<file>icons/png/006-chrome.png</file>
+	<file>icons/png/007-windows-logo-silhouette.png</file>
+	<file>icons/png/005-chrome-1.png</file>
+
+
+
+
+</qresource>
+</RCC>

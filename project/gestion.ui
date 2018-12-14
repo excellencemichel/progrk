@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1400</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget{
+ background-color:qlineargradient(spread:pad, x1:0.936, y1:0.188, x2:0.091, y2:1, stop:0 rgba(191, 249, 92, 255), stop:1 rgba(255, 255, 255, 255))
+}
+
+#login_widget, #sigup_widget,  #profile_widget{
+ background-color: qlineargradient(spread:pad, x1:0.201273, y1:0.842, x2:0.671, y2:0.448864, stop:0 rgba(0, 229, 242, 255), stop:1 rgba(255, 255, 255, 255));
+
+}
+
+#username_label, #password_label{
+/*
+background-color:qlineargradient(spread:pad, x1:0.984, y1:0.046, x2:0.97855, y2:0.063, stop:0 rgba(249, 249, 249, 255), stop:1 rgba(255, 255, 255, 255));
+	border-color: rgb(0, 255, 0);
+*/
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="login_widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>112</y>
+      <width>521</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <widget class="QLineEdit" name="username_login_lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>64</y>
+       <width>241</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vous pouvez faire entrer votre nom d'utilisateur ou votre adresse mail&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="placeholderText">
+      <string>Username or email</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="password_login_lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>144</y>
+       <width>241</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Votre mot de passe que avez mis lors de votre inscription&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="placeholderText">
+      <string>Password</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="login_button">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>210</y>
+       <width>89</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Login</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="sigup_login_button">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>210</y>
+       <width>89</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sigup</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="username_login_label">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>70</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-color: rgb(0, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Username</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="password_label">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>150</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Password</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="or_login_label">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>210</y>
+       <width>31</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ou</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="sigup_widget" native="true">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>573</x>
+      <y>112</y>
+      <width>621</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="username_signup_label">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>196</y>
+       <width>91</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Username</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="prenom_signup_label">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>50</y>
+       <width>91</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Prenom</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="nom_signup_label">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>120</y>
+       <width>81</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nom</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="password_signup_label">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>290</y>
+       <width>91</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Password</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="confirmation_pass_signup_label">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>360</y>
+       <width>91</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Confirmation</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="prenom_sigunp_lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>44</y>
+       <width>301</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>Michel</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="nom_signup_lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>172</x>
+       <y>110</y>
+       <width>301</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>Saint Pierre</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="username_signup_lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>190</y>
+       <width>301</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>ExcellenceMichel</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="password_signup_lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>280</y>
+       <width>301</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>Plus de 7 caractères</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="confirmation_pass_signup_lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>354</y>
+       <width>301</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>Confirmation du mot de passe</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="signup_signup_button">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>410</y>
+       <width>161</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Enregistrer</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="barre_menu">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1400</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+   </widget>
+   <addaction name="menuMenu"/>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>username_login_lineEdit</tabstop>
+  <tabstop>password_login_lineEdit</tabstop>
+  <tabstop>login_button</tabstop>
+  <tabstop>sigup_login_button</tabstop>
+  <tabstop>prenom_sigunp_lineEdit</tabstop>
+  <tabstop>nom_signup_lineEdit</tabstop>
+  <tabstop>username_signup_lineEdit</tabstop>
+  <tabstop>password_signup_lineEdit</tabstop>
+  <tabstop>confirmation_pass_signup_lineEdit</tabstop>
+  <tabstop>signup_signup_button</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

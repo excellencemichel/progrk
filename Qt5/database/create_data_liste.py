@@ -17,10 +17,10 @@ class Create:
 	Classe pour la connexion à la base de données
 	Le problème majeur est comment initier la creation d'une table dans la base de données et
 	garder la même instance pour l'insertion des données dans cettes table
-	par celà il y a rique que dès la création d'un objet de la classe qu'il ait crétion directement
+	par celà il y a risque que dès la création d'un objet de la classe qu'il ait crétion directement
 	d'une table chose qui n'est pas bonne bonne car la classe n'as pas pour simple rôle de créer
 	des tables, on peut aussi inserrer des données et les recupérer voir aussi les supprimer si
-	ça simpose
+	ça s'impose
 	celà dit il faut alors qu'a chaque creation d'un objet qu'on oblige qu'il ait la fourniture seulement le nom
 	de la table à travers le contructeur pas pour la créer directement ou bien inserer directement des donnés
 	Cela nous permet de garder le fille sur chacun des objets créer qu'il soit pour les la création proprement 
@@ -38,7 +38,7 @@ class Create:
 			#Connection à la base de données avec les paramètres nécésaaires
 			self.connection = psycopg2.connect("dbname = 'formation' user = 'michel' host = 'localhost' password = 'SaintMichel' port ='5432' ")
 			
-			#C'est ça qui autorise la cr&tion des tbale sinon les fonction vont 100 fois s'exécuter rien ne va se passer
+			#C'est ça qui autorise la création des table sinon les fonction vont 100 fois s'exécuter rien ne va se passer
 			self.connection.autocommit = True
 
 
@@ -59,7 +59,7 @@ class Create:
 	def create_table(self, table_name):
 		"""
 		Methode(fonction de classe) pour la crétion de la table dans la base de données
-		le nom table_name est obligation pour pouvoir nommer la table
+		le nom table_name est obligatoir pour pouvoir nommer la table
 		si on crée un objet de cette classe, ce objet possede déjà le nom table_name
 		on peut l'utiliser pour le nom de la table à savoir self.table_name
 		Voici la syntax :
@@ -67,7 +67,7 @@ class Create:
 				obj.create_table(obj.table_name)
 		Ce la crée une table dans la basse de données du même nom que l'argument donné à l'instanciation de l'objet
 		"""
-		self.table_name = table_name
+		# self.table_name = table_name
 		# print(type(table_name))
 		print(type(self.table_name))
 
@@ -78,7 +78,7 @@ class Create:
 
 			self.cursor.execute(create_commande)
 
-		except psycopg2.ProgrammingError :
+		except psycopg2.ProgrammingError.DUPLICATE_TABLE:
 			print("Cette table existe déjà")
 
 		# return self.table_name
@@ -135,9 +135,9 @@ class Create:
 if __name__ == '__main__':
 
 
-	new_table = Create("liste")
+	new_table = Create("Michel")
 
-	# new_table.create_table(new_table.table_name)
+	new_table.create_table(new_table.table_name)
 	new_table.insert_items(new_table.table_name, nom="Michel", prenom="Excellence", profession="Geek", age="23", nationalite="Guinéene", ville="Marrakech", residence="Saada")
 
 	pprint(new_table.query_all(new_table.table_name))

@@ -84,12 +84,14 @@ class Login(QtWidgets.QDialog, Ui_DialogLogin):
 										"dbname = 'formation' user = 'michel' host = 'localhost' password = 'SaintMichel' port ='5432' "
 									)
 
-			cursor_dbase = connection_dbase.cursor()
+			import pdb; pdb.set_trace()
+
 
 
 		except:
 			print("Cant connect on database")
 
+		cursor_dbase = connection_dbase.cursor()
 		print(cursor_dbase)
 
 
@@ -102,6 +104,7 @@ class Login(QtWidgets.QDialog, Ui_DialogLogin):
 
 		if len(result)>0:
 			print("User found !")
+			self.hide()
 
 			self.wellcomWindowShow()
 

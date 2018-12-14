@@ -11,7 +11,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_DialogLogin(object):
     def setupUi(self, DialogLogin):
         DialogLogin.setObjectName("DialogLogin")
-        DialogLogin.resize(661, 403)
+        DialogLogin.resize(652, 425)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(DialogLogin.sizePolicy().hasHeightForWidth())
+        DialogLogin.setSizePolicy(sizePolicy)
         DialogLogin.setStyleSheet("QDialog {\n"
 "background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(132, 214, 232, 255), stop:1 rgba(255, 255, 255, 255));\n"
 "\n"
@@ -45,7 +50,7 @@ class Ui_DialogLogin(object):
 "*/\n"
 "            }")
         self.username_label = QtWidgets.QLabel(DialogLogin)
-        self.username_label.setGeometry(QtCore.QRect(150, 180, 111, 17))
+        self.username_label.setGeometry(QtCore.QRect(9, 120, 92, 19))
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(False)
@@ -53,34 +58,18 @@ class Ui_DialogLogin(object):
         self.username_label.setFont(font)
         self.username_label.setObjectName("username_label")
         self.password_label = QtWidgets.QLabel(DialogLogin)
-        self.password_label.setGeometry(QtCore.QRect(150, 240, 101, 17))
+        self.password_label.setGeometry(QtCore.QRect(9, 185, 93, 19))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.password_label.setFont(font)
         self.password_label.setObjectName("password_label")
-        self.username_lineEdit = QtWidgets.QLineEdit(DialogLogin)
-        self.username_lineEdit.setGeometry(QtCore.QRect(280, 180, 211, 25))
-        self.username_lineEdit.setStyleSheet("")
-        self.username_lineEdit.setObjectName("username_lineEdit")
-        self.password_lineEdit = QtWidgets.QLineEdit(DialogLogin)
-        self.password_lineEdit.setGeometry(QtCore.QRect(280, 240, 211, 25))
-        self.password_lineEdit.setStyleSheet("")
-        self.password_lineEdit.setObjectName("password_lineEdit")
-        self.login_btn = QtWidgets.QPushButton(DialogLogin)
-        self.login_btn.setGeometry(QtCore.QRect(280, 330, 71, 25))
-        self.login_btn.setStyleSheet("color:rgb(255, 255, 255);\n"
-"\n"
-"/*\n"
-"border:none;\n"
-"C\'est pas idéal d\'enlever la bordure\n"
-"*/")
-        self.login_btn.setObjectName("login_btn")
-        self.signup_btn = QtWidgets.QPushButton(DialogLogin)
-        self.signup_btn.setGeometry(QtCore.QRect(378, 330, 81, 25))
-        self.signup_btn.setStyleSheet("color:#fff;")
-        self.signup_btn.setObjectName("signup_btn")
         self.panel_label = QtWidgets.QLabel(DialogLogin)
-        self.panel_label.setGeometry(QtCore.QRect(200, 69, 261, 41))
+        self.panel_label.setGeometry(QtCore.QRect(9, 43, 166, 37))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.panel_label.sizePolicy().hasHeightForWidth())
+        self.panel_label.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setPointSize(24)
         font.setBold(True)
@@ -88,31 +77,50 @@ class Ui_DialogLogin(object):
         self.panel_label.setFont(font)
         self.panel_label.setAlignment(QtCore.Qt.AlignCenter)
         self.panel_label.setObjectName("panel_label")
+        self.username_lineEdit = QtWidgets.QLineEdit(DialogLogin)
+        self.username_lineEdit.setGeometry(QtCore.QRect(151, 120, 142, 25))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.username_lineEdit.sizePolicy().hasHeightForWidth())
+        self.username_lineEdit.setSizePolicy(sizePolicy)
+        self.username_lineEdit.setStyleSheet("")
+        self.username_lineEdit.setObjectName("username_lineEdit")
+        self.password_lineEdit = QtWidgets.QLineEdit(DialogLogin)
+        self.password_lineEdit.setGeometry(QtCore.QRect(151, 185, 142, 25))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.password_lineEdit.sizePolicy().hasHeightForWidth())
+        self.password_lineEdit.setSizePolicy(sizePolicy)
+        self.password_lineEdit.setStyleSheet("")
+        self.password_lineEdit.setObjectName("password_lineEdit")
+        self.signup_btn = QtWidgets.QPushButton(DialogLogin)
+        self.signup_btn.setGeometry(QtCore.QRect(299, 250, 80, 25))
+        self.signup_btn.setStyleSheet("color:#fff;")
+        self.signup_btn.setObjectName("signup_btn")
+        self.login_btn = QtWidgets.QPushButton(DialogLogin)
+        self.login_btn.setGeometry(QtCore.QRect(151, 250, 80, 25))
+        self.login_btn.setStyleSheet("color:rgb(255, 255, 255);\n"
+"\n"
+"/*\n"
+"border:none;\n"
+"C\'est pas idéal d\'enlever la bordure\n"
+"*/")
+        self.login_btn.setObjectName("login_btn")
 
         self.retranslateUi(DialogLogin)
         QtCore.QMetaObject.connectSlotsByName(DialogLogin)
+        DialogLogin.setTabOrder(self.username_lineEdit, self.password_lineEdit)
+        DialogLogin.setTabOrder(self.password_lineEdit, self.login_btn)
+        DialogLogin.setTabOrder(self.login_btn, self.signup_btn)
 
     def retranslateUi(self, DialogLogin):
         _translate = QtCore.QCoreApplication.translate
-        DialogLogin.setWindowTitle(_translate("DialogLogin", "Login In"))
+        DialogLogin.setWindowTitle(_translate("DialogLogin", "Dialog"))
         self.username_label.setText(_translate("DialogLogin", "USERNAME :"))
         self.password_label.setText(_translate("DialogLogin", "PASSWORD :"))
-        self.login_btn.setText(_translate("DialogLogin", "Login"))
-        self.signup_btn.setText(_translate("DialogLogin", "Sign Up"))
         self.panel_label.setText(_translate("DialogLogin", "Login form"))
+        self.signup_btn.setText(_translate("DialogLogin", "Sign Up"))
+        self.login_btn.setText(_translate("DialogLogin", "Login"))
 
-
-if __name__ == '__main__':
-    import sys
-
-    app = QtWidgets.QApplication(sys.argv)
-
-    Dialog = QtWidgets.QDialog()
-
-    ui = Ui_DialogLogin()
-
-    ui.setupUi(Dialog)
-
-    Dialog.show()
-
-    sys.exit(app.exec_())
