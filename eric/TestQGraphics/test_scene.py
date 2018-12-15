@@ -5,7 +5,7 @@
 
 
 #Library import
-from PyQt5.QtWidgets import (QMainWindow, QGraphicsScene,
+from PyQt5.QtWidgets import (QApplication, QMainWindow, QGraphicsScene,
 				QGraphicsItem, QGraphicsView,
 				QGraphicsEllipseItem, QColorDialog
 				)
@@ -38,8 +38,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 		self.angleVue = 0.0
 		self.zoomPctVue = 1.0
-
+		self.dialRotation.setValue(0)
 		self.horizontalSliderZoom.setValue(100)
+
 		self.lineEditTexte.setText("Tous en scène !")
 
 		self.scene.selectionChanged.connect(
@@ -47,12 +48,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.onSceneSelectionChanged()
 
 
-
-	def onSceneSelectionChanged(self):
-		nbElementSelectionnes = len(self.scene.selectedItems())
-		self.pushButtonChangerCouleur.setEnabled(nbElementSelectionnes > 0)
-		msg = "%d éléments sélectionnés"%nbElementSelectionnes
-		self.statusBar.showMessage(msg)
 
 
 	def remplirScene(self):
@@ -63,6 +58,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		dy = rectGris.rect().height()-self.texte.sceneBoundingRect().height()
 		self.texte.setPos(rectGris.x(), rectGris.y()+dy)
 		self.texte.setDefaultTextColor(Qt.cyan)
+		self.texte.setZValue(1)
 		scene.addItem(self.texte)
 		diametre = 48 #Diametre de smiley
 		ox = 4. #Largeur
@@ -82,6 +78,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		for item in scene.items():
 			item.setFlag(QGraphicsItem.ItemIsMovable)
 			item.setFlag(QGraphicsItem.ItemIsSelectable)
+
 
 
 
@@ -111,6 +108,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 
 
+	def onSceneSelectionChanged(self):
+		nbElementSelectionnes = len(self.scene.selectedItems())
+		self.pushButtonChangerCouleur.setEnabled(nbElementSelectionnes > 0)
+		msg = "%d éléments sélectionnés"%nbElementSelectionnes
+		self.statusBar.showMessage(msg)
+
+
 	@pyqtSlot(int)
 	def on_dialRotation_valueChanged(self, nouvelAngleVue):
 		self.vuePrincipale.rotate(nouvelAngleVue-self.angleVue)
@@ -122,3 +126,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		f = (nouvZoomPctVue/100.)/self.zoomPctVue
 		self.vuePrincipale.scale(f,f)
 		self.zoomPctVue = nouvZoomPctVue/100.
+
+
+
+
+if __name__ == '__main__':
+	import sys
+	app = QApplication(sys.argv)
+	mainwindow = MainWindow()
+	sys.exit(app.exec_())

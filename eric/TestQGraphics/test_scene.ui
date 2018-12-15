@@ -90,7 +90,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QDial" name="dial">
+      <widget class="QDial" name="dialRotation">
        <property name="minimum">
         <number>-180</number>
        </property>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric project file for project Email Marketing -->
-<!-- Saved: 2018-12-15, 00:05:10 -->
+<!-- Saved: 2018-12-15, 00:59:29 -->
 <!-- Copyright (C) 2018 Michel, bnvnmmnl@gmail.com -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -17,7 +17,9 @@
     <Source>__init__.py</Source>
     <Source>start_app.py</Source>
   </Sources>
-  <Forms/>
+  <Forms>
+    <Form>MarketingEmail.ui</Form>
+  </Forms>
   <Translations/>
   <Resources/>
   <Interfaces/>
