@@ -17,6 +17,29 @@ Exemple : si l'écran fait 900 pixels de large, la fenêtre, 400, le calcul pour
 Nous aurons donc 250 pixels d'espace, une fenêtre de 400 pixels, 250 pixels d'espace soit bien 900 pixels au total."""
  
 
+################################""
+#Cette partie permet de récupérer les dimensions de l'écran de l'utilisateur 
+
+import sys
+
+app1 = QtWidgets.QApplication(sys.argv)
+
+screen = app.primaryScreen()
+print('Screen: %s' % screen.name())
+size = screen.size()
+print('Size: %d x %d' % (size.width(), size.height()))
+rect = screen.availableGeometry()
+print('Available: %d x %d' % (rect.width(), rect.height()))
+
+#######################################""
+
+def main1():
+"""
+allow you to get size of your courant screen
+-1 is to precise that it is the courant screen
+"""
+    sizeObject = QtWidgets.QDesktopWidget().screenGeometry(-1)
+    print(" Screen size : "  + str(sizeObject.height()) + "x"  + str(sizeObject.width()))
 
 if __name__ == '__main__':
 	import sys
