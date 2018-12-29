@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric project file for project Test QGraphics -->
-<!-- Saved: 2018-11-24, 11:02:47 -->
+<!-- Saved: 2018-12-29, 01:49:24 -->
 <!-- Copyright (C) 2018 Michel, bnvnmmnl@gmail.com -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -14,10 +14,14 @@
   <Email>bnvnmmnl@gmail.com</Email>
   <Eol index="0"/>
   <Sources>
+    <Source>Ui_test_scene.py</Source>
     <Source>__init__.py</Source>
     <Source>start_app.py</Source>
+    <Source>test_scene.py</Source>
   </Sources>
-  <Forms/>
+  <Forms>
+    <Form>test_scene.ui</Form>
+  </Forms>
   <Translations/>
   <Resources/>
   <Interfaces/>

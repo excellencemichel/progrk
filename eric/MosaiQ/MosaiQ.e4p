@@ -1,45 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
-<!-- eric project file for project Test -->
-<!-- Saved: 2018-11-06, 19:39:53 -->
+<!-- eric project file for project MosaiQ -->
+<!-- Saved: 2018-12-29, 01:55:47 -->
 <!-- Copyright (C) 2018 Michel, bnvnmmnl@gmail.com -->
 <Project version="5.1">
   <Language>en_US</Language>
-  <Hash>f3bb5f495772f128d3666e8193ec7ee20aa499ae</Hash>
-  <ProgLanguage mixed="1">Python3</ProgLanguage>
+  <Hash>5af3e9e1ae4cb4064e5e6a007b199ee8845633f7</Hash>
+  <ProgLanguage mixed="0">Python3</ProgLanguage>
   <ProjectType>PyQt5</ProjectType>
+  <Description>Le carré magique avec le concepteur de son univers</Description>
   <Version>0.1</Version>
   <Author>Michel</Author>
   <Email>bnvnmmnl@gmail.com</Email>
   <Eol index="0"/>
   <Sources>
     <Source>__init__.py</Source>
-    <Source>test.py</Source>
   </Sources>
   <Forms/>
   <Translations/>
   <Resources/>
   <Interfaces/>
-  <Others/>
-  <MainScript>test.py</MainScript>
+  <Others>
+    <Other>start_app</Other>
+  </Others>
+  <MainScript>start_app</MainScript>
   <Vcs>
     <VcsType>None</VcsType>
   </Vcs>
   <FiletypeAssociations>
     <FiletypeAssociation pattern="*.e4p" type="OTHERS"/>
     <FiletypeAssociation pattern="*.idl" type="INTERFACES"/>
-    <FiletypeAssociation pattern="*.js" type="SOURCES"/>
     <FiletypeAssociation pattern="*.md" type="OTHERS"/>
-    <FiletypeAssociation pattern="*.ptl" type="SOURCES"/>
     <FiletypeAssociation pattern="*.py" type="SOURCES"/>
-    <FiletypeAssociation pattern="*.py2" type="SOURCES"/>
     <FiletypeAssociation pattern="*.py3" type="SOURCES"/>
     <FiletypeAssociation pattern="*.pyw" type="SOURCES"/>
-    <FiletypeAssociation pattern="*.pyw2" type="SOURCES"/>
     <FiletypeAssociation pattern="*.pyw3" type="SOURCES"/>
     <FiletypeAssociation pattern="*.qm" type="TRANSLATIONS"/>
     <FiletypeAssociation pattern="*.qrc" type="RESOURCES"/>
-    <FiletypeAssociation pattern="*.rb" type="SOURCES"/>
     <FiletypeAssociation pattern="*.rst" type="OTHERS"/>
     <FiletypeAssociation pattern="*.ts" type="TRANSLATIONS"/>
     <FiletypeAssociation pattern="*.txt" type="OTHERS"/>
