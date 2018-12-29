@@ -56,9 +56,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.rectGris = rectGris
 		self.texte = scene.addText("")
 		dy = rectGris.rect().height()-self.texte.sceneBoundingRect().height()
-		self.texte.setPos(rectGris.x(), rectGris.y()+dy)
+		self.texte.setPos(rectGris.x(), rectGris.y() + dy)
 		self.texte.setDefaultTextColor(Qt.cyan)
-		self.texte.setZValue(1)
+		#self.texte.setZValue(1)
 		scene.addItem(self.texte)
 		diametre = 48 #Diametre de smiley
 		ox = 4. #Largeur
@@ -90,7 +90,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 
 
-	@pyqtSlot()
+	@pyqtSlot(str)
 	def on_lineEditTexte_textChanged(self, msg):
 		self.texte.setPlainText(msg)
 
@@ -121,7 +121,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.angleVue = nouvelAngleVue
 
 
-	@pyqtSlot()
+	@pyqtSlot(int)
 	def on_horizontalSliderZoom_valueChanged(self, nouvZoomPctVue):
 		f = (nouvZoomPctVue/100.)/self.zoomPctVue
 		self.vuePrincipale.scale(f,f)
