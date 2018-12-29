@@ -3,8 +3,17 @@
 from random import randint
 
 from PyQt5.QtCore import Qt 
-from PyQt5.QtGui import QBrush, QPen, QPainter, QColor, QCursor
-from PyQt5.QtWidgets import QApplication, QGraphicsView, QGraphicsScene, QGraphicsRectItem
+from PyQt5.QtGui import (QBrush, QPen,
+						 QPainter, QColor,
+						  QCursor
+						  )
+from PyQt5.QtWidgets import (QApplication,
+							 QGraphicsView,
+							 QGraphicsScene,
+							  QGraphicsRectItem,
+							  QFileDialog
+
+							 )
 
 
 #Paramètres de configuration 
@@ -122,6 +131,12 @@ class VueMosaiQ(QGraphicsView):
 			self.showFullScreen()
 		elif key == Qt.Key_Escape:
 			self.showNormal()
+
+		elif keyEvent.modifiers() == Qt.ControlModifier and Qt.Key_P:
+			(nomfichier) = QFileDialog.getSaveFileName(self, "Sauvegarder l'image", filter="PNG(*.png);;JPEG(*.jpg);;BMP(*bmp)")
+			if nomfichier:
+				pixmap = self.grab()
+				pixmap.save(nomfichier)
 		else:
 			QGraphicsView.keyPressEvent(self, keyEvent)
 
